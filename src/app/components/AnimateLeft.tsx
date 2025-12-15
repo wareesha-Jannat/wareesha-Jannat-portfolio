@@ -7,12 +7,19 @@ interface AnimateLeftProps {
   children: React.ReactNode;
   delay?: number;
   projects?: boolean;
+  className?: string;
 }
 
-const AnimateLeft = ({ children, delay = 0, projects }: AnimateLeftProps) => {
+const AnimateLeft = ({
+  children,
+  delay = 0,
+  projects,
+  className= ""
+}: AnimateLeftProps) => {
   if (projects) {
     return (
       <motion.div
+        className={className}
         initial={{ x: 100, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -24,7 +31,7 @@ const AnimateLeft = ({ children, delay = 0, projects }: AnimateLeftProps) => {
   } else {
     return (
       <motion.div
-        className="flex-1"
+        className={className}
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 100, damping: 20, delay }}

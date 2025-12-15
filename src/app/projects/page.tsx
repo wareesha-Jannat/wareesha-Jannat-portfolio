@@ -7,7 +7,7 @@ import AnimateRight from "../components/AnimateRight";
 import AnimateSection from "../components/AnimateSection";
 
 export const metadata: Metadata = {
-  title: "Projects",
+  title: "Projects | Wareesha Jannat",
 };
 const page = () => {
   return (
@@ -15,8 +15,8 @@ const page = () => {
       <h1 className="text-4xl font-bold font-heading ">Projects</h1>
       <main className="flex flex-col gap-16 my-4 w-[80%]">
         <section className="flex flex-col md:flex-row items-center justify-center gap-15">
-          <AnimateLeft projects={true}>
-            <div className="flex flex-col gap-3 order-2 md:order-1">
+          <AnimateLeft projects={true} className="order-2 md:order-1">
+            <div className="flex flex-col gap-3 ">
               <h3 className="text-2xl font-bold">Virtual Question Bank</h3>
               <h4 className="text-[18px] font-semibold">
                 Exam Preparation System
@@ -76,10 +76,14 @@ const page = () => {
               </div>
             </div>
           </AnimateLeft>
-          <AnimateRight delay={0.2} projects={true}>
-            <div className="relative order-1 md:order-2  aspect-video w-full max-w-[650px] min-w-[300px] md:min-w-[400px] border-4 border-surface rounded-[5px]">
+          <AnimateRight
+            delay={0.2}
+            projects={true}
+            className="order-1 md:order-2 "
+          >
+            <div className="relative  aspect-video w-full max-w-[650px] min-w-[300px] md:min-w-[400px] border-4 border-surface rounded-[5px]">
               <Image
-                src={"/VQB.webp"}
+                src={"/VQB.png"}
                 alt="VQB home page"
                 fill
                 priority
@@ -94,7 +98,7 @@ const page = () => {
             <AnimateLeft projects={true}>
               <div className="relative   aspect-video w-full max-w-[650px] min-w-[300px] md:min-w-[400px]   border-4 border-surface rounded-[5px]">
                 <Image
-                  src={"/boostme.webp"}
+                  src={"/boostme.png"}
                   alt="BoostMe home page"
                   fill
                   priority
@@ -155,8 +159,8 @@ const page = () => {
         </AnimateSection>
         <AnimateSection delay={0.3}>
           <section className="flex flex-col md:flex-row items-center justify-center gap-15">
-            <AnimateLeft projects={true}>
-              <div className="flex flex-col gap-3 order-2 md:order-1">
+            <AnimateLeft projects={true} className="order-2 md:order-1">
+              <div className="flex flex-col gap-3 ">
                 <h3 className="text-2xl font-bold">Echo</h3>
                 <h4 className="text-[18px] font-semibold">
                   Social Media Platform
@@ -200,15 +204,19 @@ const page = () => {
                 </div>
               </div>
             </AnimateLeft>
-            <AnimateRight delay={0.2} projects={true}>
-              <div className="relative order-1 md:order-2  aspect-video w-full max-w-[650px] min-w-[300px] md:min-w-[400px]  border-4 border-surface rounded-[5px]">
+            <AnimateRight
+              delay={0.2}
+              projects={true}
+              className="order-1 md:order-2"
+            >
+              <div className="relative   aspect-video w-full max-w-[650px] min-w-[300px] md:min-w-[400px]  border-4 border-surface rounded-[5px]">
                 <Image
                   src={"/echo.webp"}
                   alt="Echo home page"
                   fill
                   priority
                   className="object-contain"
-                  quality={90}
+                  quality={80}
                 />
               </div>
             </AnimateRight>

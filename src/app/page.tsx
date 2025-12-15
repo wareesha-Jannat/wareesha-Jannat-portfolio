@@ -5,9 +5,9 @@ import AnimateLeft from "./components/AnimateLeft";
 export default function Home() {
   return (
     <main className=" flex-1 flex items-center justify-center flex-col md:flex-row md:gap-20 py-8 px-6 mx-auto  max-w-7xl overflow-hidden">
-      <AnimateRight >
+      <AnimateRight className="flex-1" >
         <section className=" flex items-center justify-end">
-          <div className="relative  max-h-[316px] max-w-[316px] w-full height-full border-6 rounded-full border-surface overflow-hidden shadow-lg shadow-blue-950 ">
+          <div className="relative  max-h-[280px] max-w-[280px] w-full height-full border-6 rounded-full border-surface overflow-hidden shadow-lg shadow-blue-950 ">
             <Image
               src={"/Profilepic.webp"}
               alt="profile picture"
@@ -19,7 +19,7 @@ export default function Home() {
           </div>
         </section>
       </AnimateRight>
-      <AnimateLeft>
+      <AnimateLeft className="flex-1">
         <section className="  flex flex-col  gap-5  justify-center p-5">
           <h1 className="font-bold text-4xl font-heading min-[700px]:hidden leading-relaxed">
             WAREESHA JANNAT

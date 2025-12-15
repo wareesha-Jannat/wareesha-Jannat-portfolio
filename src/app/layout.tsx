@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Wareesha Jannat — Web Developer",
+  title: " — Web Developer",
   icons: {
     icon: "/favicon.png",
   },
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     description:
       "I build responsive and interactive web applications using modern technologies.",
     type: "website",
-    url: "https://your-portfolio-url.com",
+    url: "https://wareesha-jannat-portfolio.vercel.app",
     images: [
       {
-        url: "https://your-portfolio-url.com/preview-image.png",
+        url: "https://wareesha-jannat-portfolio.vercel.app/preview-image.png",
         width: 1200,
         height: 630,
         alt: "Wareesha Jannat Portfolio Preview",
