@@ -1,11 +1,12 @@
 import Image from "next/image";
 import AnimateRight from "./components/AnimateRight";
 import AnimateLeft from "./components/AnimateLeft";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <main className=" flex-1 flex items-center justify-center flex-col md:flex-row md:gap-20 py-8 px-6 mx-auto  max-w-7xl overflow-hidden">
-      <AnimateRight className="flex-1" >
+      <AnimateRight className="flex-1">
         <section className=" flex items-center justify-end">
           <div className="relative  max-h-[280px] max-w-[280px] w-full height-full border-6 rounded-full border-surface overflow-hidden shadow-lg shadow-blue-950 ">
             <Image
@@ -33,11 +34,15 @@ export default function Home() {
             simplicity, usability, and continuous improvement.
           </h3>
           <div className="flex items-center justify-start gap-5">
-            <button className="bg-white text-[14px]  text-foreground font-bold px-5 py-3 border border-gray-300 rounded-xl hover:bg-foreground hover:text-white transition">
+            <a
+              href="/Wareesha_Jannat_Web_Developer_Resume.pdf"
+              download
+              className="inline-flex items-center bg-white text-[14px] text-foreground font-bold px-5 py-3 border border-gray-300 rounded-xl hover:bg-foreground hover:text-white transition"
+            >
               DOWNLOAD RESUME
-            </button>
+            </a>
             <button className="bg-surface text-[14px]  text-on-surface font-bold px-5 py-3 border border-gray-300 rounded-xl hover:bg-white hover:text-foreground transition">
-              GET IN TOUCH
+              <Link href={"/contact"}>GET IN TOUCH</Link>
             </button>
           </div>
         </section>

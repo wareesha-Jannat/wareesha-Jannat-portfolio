@@ -83,12 +83,12 @@ const page = () => {
           >
             <div className="relative  aspect-video w-full max-w-[650px] min-w-[300px] md:min-w-[400px] border-4 border-surface rounded-[5px]">
               <Image
-                src={"/VQB.png"}
+                src={"/VQB.PNG"}
                 alt="VQB home page"
                 fill
                 priority
                 quality={90}
-                className="object-cover"
+                className="object-contain"
               />
             </div>
           </AnimateRight>
@@ -98,7 +98,7 @@ const page = () => {
             <AnimateLeft projects={true}>
               <div className="relative   aspect-video w-full max-w-[650px] min-w-[300px] md:min-w-[400px]   border-4 border-surface rounded-[5px]">
                 <Image
-                  src={"/boostme.png"}
+                  src={"/boostme.PNG"}
                   alt="BoostMe home page"
                   fill
                   priority
