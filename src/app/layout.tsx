@@ -9,16 +9,18 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
+  display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: " — Web Developer",
+  title: "Wareesha Jannat — Web Developer",
   icons: {
     icon: "/favicon.png",
   },
@@ -43,7 +45,7 @@ export const metadata: Metadata = {
     url: "https://wareesha-jannat-portfolio.vercel.app",
     images: [
       {
-        url: "https://wareesha-jannat-portfolio.vercel.app/preview-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Wareesha Jannat Portfolio Preview",
