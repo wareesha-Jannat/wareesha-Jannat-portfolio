@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import AnimateLeft from "../components/AnimateLeft";
 import AnimateRight from "../components/AnimateRight";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact | Wareesha Jannat",
@@ -11,7 +12,7 @@ const page = () => {
   return (
     <div className="flex-1 flex flex-col items-center justify-center gap-5 mx-auto py-7 max-w-7xl">
       <h1 className="text-4xl font-bold mt-3 font-heading">
-        Let&apos;s Connect
+        <Link href={"/"}>Let&apos;s Connect</Link>
       </h1>
       <main className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-20 px-4 py-5">
         <AnimateLeft>
@@ -30,7 +31,8 @@ const page = () => {
         <AnimateRight delay={0.2}>
           <section>
             <h4 className="p-4">
-              i&apos;m open to remote opportunities - feel free to reach out
+              I&apos;m open to remote opportunities—feel free to reach out if
+              you&apos;d like to connect.
             </h4>
             <form
               className="flex flex-col gap-5 px-4"

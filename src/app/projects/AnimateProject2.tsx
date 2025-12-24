@@ -1,30 +1,33 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { fadeUpStrong, imageReveal, staggerContainer } from "../lib/animation";
 import AnimateLeft from "../components/AnimateLeft";
 import AnimateRight from "../components/AnimateRight";
+import LightBoxImage from "../components/LightBoxImage";
 
 const AnimateProject2 = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <section className="flex flex-1 flex-col md:flex-row items-center justify-center gap-10 md:gap-15  ">
       <AnimateLeft projects={true}>
         <motion.div
-          className="relative   aspect-[1314/641] w-full max-w-[650px] min-w-[300px] md:min-w-[400px]   border-4 border-surface rounded-[5px] "
+          className="relative   aspect-1314/641 w-full max-w-[650px] min-w-[300px] md:min-w-[400px]   border-4 border-surface rounded-[5px] "
           variants={imageReveal}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
+          onClick={() => setIsOpen(true)}
         >
           <Image
             src={"/boostme.PNG"}
             alt="BoostMe home page"
             fill
-            priority
             quality={90}
             className="object-cover"
+            sizes="(max-width: 768px) 100vw , 50vw"
           />
         </motion.div>
       </AnimateLeft>
@@ -88,6 +91,7 @@ const AnimateProject2 = () => {
           </motion.div>
         </motion.div>
       </AnimateRight>
+      {isOpen && <LightBoxImage open={isOpen} setIsOpen={setIsOpen} src={"/boostme.PNG"} />}
     </section>
   );
 };

@@ -15,6 +15,7 @@ export default function Home() {
               height={270}
               width={270}
               priority
+              sizes="(max-width : 768px) 100vw, 50vw"
               className=" object-cover "
             />
           </div>
@@ -29,8 +30,8 @@ export default function Home() {
             Web Developer
           </h1>
           <h3 className="max-w-[80%] leading-relaxed">
-            Hi, I&apos;m Wareesha Jannat. I create clean, responsive web
-            applications using modern technologies, with a strong focus on
+            Hi, I&apos;m Wareesha Jannat. I build clean, responsive web
+            applications using modern web technologies, with a focus on
             simplicity, usability, and continuous improvement.
           </h3>
           <div className="flex items-center justify-start gap-5">

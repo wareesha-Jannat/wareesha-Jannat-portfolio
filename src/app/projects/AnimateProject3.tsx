@@ -1,12 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { fadeUpStrong, imageReveal, staggerContainer } from "../lib/animation";
 import AnimateLeft from "../components/AnimateLeft";
 import AnimateRight from "../components/AnimateRight";
+import LightBoxImage from "../components/LightBoxImage";
 const AnimateProject3 = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <section className="flex flex-1 flex-col md:flex-row items-center justify-center gap-10 md:gap-15 ">
       <AnimateLeft projects={true} className="order-2 md:order-1">
@@ -68,22 +71,26 @@ const AnimateProject3 = () => {
       </AnimateLeft>
       <AnimateRight delay={0.2} projects={true} className="order-1 md:order-2">
         <motion.div
-          className="relative  aspect-[1312/650] w-full max-w-[650px]  h-full min-w-[300px] md:min-w-[400px]  border-4 border-surface rounded-[5px]"
+          className="relative  aspect-1312/650 w-full max-w-[650px]  h-full min-w-[300px] md:min-w-[400px]  border-4 border-surface rounded-[5px]"
           variants={imageReveal}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
+          onClick={() => setIsOpen(true)}
         >
           <Image
             src={"/echo.webp"}
             alt="Echo home page"
             fill
-            priority
             className="object-cover"
+            sizes="(max-width: 768px) 100vw , 50vw"
             quality={80}
           />
         </motion.div>
       </AnimateRight>
+      {isOpen && (
+        <LightBoxImage open={isOpen} setIsOpen={setIsOpen} src="/echo.webp" />
+      )}
     </section>
   );
 };
