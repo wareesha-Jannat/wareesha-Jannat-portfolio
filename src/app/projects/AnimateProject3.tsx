@@ -30,15 +30,17 @@ const AnimateProject3 = () => {
             Social Media Platform
           </motion.h4>
           <motion.p className="text-[14px]" variants={fadeUpStrong}>
-            Echo is a full-stack social media application built with modern
-            architecture and real-world features. Users can sign up using OAuth
-            or custom authentication, create posts, like and comment, follow
-            other users, and chat in real time. The platform also includes
-            bookmarking, a “question of the day,” mood-tagged posts, and
-            mood-based search for discovering content.
+            Echo is a full-stack social media platform designed to connect users
+            with real-time interaction. It features OAuth and custom
+            authentication, posting, commenting, following, and chat
+            functionality. The platform also supports bookmarking, mood-tagged
+            posts, a question-of-the-day, and mood-based content discovery. Echo
+            demonstrates modern full-stack web development practices and
+            responsive UI design.
           </motion.p>
           <motion.h4 className="text-[18px] " variants={fadeUpStrong}>
-            <b>Teck Stack </b> : Nextjs + Prisma(Postgre database)
+            <b>Tech Stack </b> : Next.js + Prisma (PostgreSQL) + OAuth &
+            Session-Based Authentication
           </motion.h4>
           <motion.h5 className="font-bold" variants={fadeUpStrong}>
             Test Account

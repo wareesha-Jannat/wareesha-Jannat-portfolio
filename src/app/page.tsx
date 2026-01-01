@@ -26,17 +26,17 @@ export default function Home() {
           <h1 className="font-bold text-4xl font-heading min-[700px]:hidden leading-11">
             WAREESHA JANNAT
           </h1>
-          <h1 className="font-bold text-3xl font-heading text-accent min-[700px]:text-foreground min-[700px]:text-5xl min-[700px]:w-[30%]">
-            Web Developer
+          <h1 className="font-bold text-3xl font-heading text-accent min-[700px]:text-foreground min-[700px]:text-5xl min-[700px]:w-[60%] ">
+            Next.js Web Developer
           </h1>
           <h3 className="max-w-[80%] leading-relaxed">
-            Hi, I&apos;m Wareesha Jannat. I build clean, responsive web
-            applications using modern web technologies, with a focus on
-            simplicity, usability, and continuous improvement.
+            Building Clean, responsive web applications developed with modern
+            web technologies, emphasizing simplicity, usability, and continuous
+            improvement.
           </h3>
           <div className="flex items-center justify-start gap-5">
             <a
-              href="/Wareesha_Jannat_Web_Developer_Resume.pdf"
+              href="/Wareesha-Jannat-Resume.pdf"
               download
               className="inline-flex items-center bg-white text-[14px] text-foreground font-bold px-5 py-3 border border-gray-300 rounded-xl hover:bg-foreground hover:text-white transition"
             >

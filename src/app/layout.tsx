@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     url: "https://wareesha-jannat-portfolio.vercel.app",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://wareesha-jannat-portfolio.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Wareesha Jannat Portfolio Preview",
@@ -67,13 +67,17 @@ export default function RootLayout({
               "@type": "Person",
               name: "Wareesha Jannat",
               jobTitle: "Web Developer",
-              url: "https://your-portfolio-url.com",
+              url: "https://wareesha-jannat-portfolio.vercel.app",
               sameAs: [
                 "https://github.com/wareesha-Jannat",
-                "https://www.linkedin.com/in/wareesha-jannat-172409399/",
+                "https://www.linkedin.com/in/wareesha-jannat",
               ],
             }),
           }}
+        />
+        <link
+          rel="canonical"
+          href="https://wareesha-jannat-portfolio.vercel.app"
         />
       </head>
       <body

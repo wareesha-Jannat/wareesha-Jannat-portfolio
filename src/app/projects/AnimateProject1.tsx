@@ -32,13 +32,15 @@ const AnimateProject1 = () => {
           <motion.p className="text-[14px]" variants={fadeUpStrong}>
             Virtual Question Bank is an exam-preparation platform that allows
             students to study subject-wise questions, practice them, take timed
-            exams, and view analytics. Admins can manage subjects, topics, and
-            question banks, respond to support requests, send notifications, and
-            track usage insights. The system includes custom JWT authentication
-            and separate dashboards for students and admins.
+            exams, and view performance analytics. The system includes separate
+            dashboards for students and admins, enabling management of subjects,
+            topics, and question banks, as well as handling support requests and
+            sending notifications. Custom JWT authentication ensures secure
+            access to protected routes.
           </motion.p>
           <motion.h4 className="text-[18px] " variants={fadeUpStrong}>
-            <b>Teck Stack </b> : Nextjs + Expressjs + mongoose(Mongodb database)
+            <b>Tech Stack </b> : Next.js + Express.js + Mongoose (Mongodb
+            database) + Custom JWT Authentication
           </motion.h4>
           <motion.h5 className="font-bold" variants={fadeUpStrong}>
             Test Account

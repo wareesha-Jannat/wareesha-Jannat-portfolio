@@ -49,13 +49,16 @@ const AnimateProject2 = () => {
             Creator Support Application
           </motion.h4>
           <motion.p className="text-[14px]" variants={fadeUpStrong}>
-            BoostMe is a creator support platform where creators can showcase
-            their work and receive contributions from their community. The
-            application includes secure login and signup using NextAuth, creator
-            profiles, donation flow, and a clean dashboard for managing data.
+            BoostMe is a creator support platform that allows creators to
+            showcase their work and receive contributions from their community.
+            The platform includes secure authentication using NextAuth, creator
+            profiles, contribution flows, and a dashboard for managing content
+            and data. PayFast payment integration (test environment) is
+            implemented for contribution processing.
           </motion.p>
           <motion.h4 className="text-[18px] " variants={fadeUpStrong}>
-            <b>Teck Stack </b> : Nextjs + mongoose(Mongodb database)
+            <b>Tech Stack </b> : Next.js + Next Auth + Mongoose (Mongodb
+            database)
           </motion.h4>
           <motion.h5 className="font-bold" variants={fadeUpStrong}>
             Test Account
@@ -91,7 +94,13 @@ const AnimateProject2 = () => {
           </motion.div>
         </motion.div>
       </AnimateRight>
-      {isOpen && <LightBoxImage open={isOpen} setIsOpen={setIsOpen} src={"/boostme.PNG"} />}
+      {isOpen && (
+        <LightBoxImage
+          open={isOpen}
+          setIsOpen={setIsOpen}
+          src={"/boostme.PNG"}
+        />
+      )}
     </section>
   );
 };

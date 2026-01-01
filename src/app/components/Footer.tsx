@@ -22,11 +22,11 @@ const Footer = () => {
           <li className="flex flex-col items-center justify-center gap-1">
             <h5 className="text-center">LinkedIn</h5>
             <Link
-              href={"https://www.linkedin.com/in/wareesha-jannat-172409399/"}
+              href={"https://www.linkedin.com/in/wareesha-jannat"}
               target="_blank"
               className="hover:text-on-surface hover:underline  text-[12px] text-center "
             >
-              https://www.linkedin.com/in/wareesha-jannat-172409399/
+              https://www.linkedin.com/in/wareesha-jannat
             </Link>
           </li>
           <li>

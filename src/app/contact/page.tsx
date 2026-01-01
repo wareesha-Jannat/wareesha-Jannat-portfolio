@@ -31,8 +31,10 @@ const page = () => {
         <AnimateRight delay={0.2}>
           <section>
             <h4 className="p-4">
-              I&apos;m open to remote opportunities—feel free to reach out if
-              you&apos;d like to connect.
+              <h4 className="p-4">
+                Open to remote opportunities. Please reach out to connect or
+                discuss potential collaborations.
+              </h4>
             </h4>
             <form
               className="flex flex-col gap-5 px-4"
