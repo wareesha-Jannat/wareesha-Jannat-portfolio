@@ -3,6 +3,14 @@ import AnimateRight from "./components/AnimateRight";
 import AnimateLeft from "./components/AnimateLeft";
 import Link from "next/link";
 
+export const metadata = {
+  robots: {
+    index: true,
+    follow: true,
+    noimageindex: true,
+  },
+};
+
 export default function Home() {
   return (
     <main className=" flex-1 flex items-center justify-centergap-5 flex-col md:flex-row md:gap-20 py-8 px-6 mx-auto  max-w-7xl overflow-hidden">

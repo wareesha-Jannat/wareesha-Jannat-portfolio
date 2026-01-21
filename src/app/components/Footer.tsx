@@ -11,32 +11,32 @@ const Footer = () => {
         <ul className="flex items-center text-links justify-evenly flex-wrap flex-col lg:flex-row  gap-5 text-[16px]">
           <li>
             <h5 className="text-center">GitHub</h5>
-            <Link
+            <a
               href={"https://github.com/wareesha-Jannat"}
               target="_blank"
               className="hover:text-on-surface  text-[12px] hover:underline "
             >
               https://github.com/wareesha-Jannat
-            </Link>
+            </a>
           </li>
           <li className="flex flex-col items-center justify-center gap-1">
             <h5 className="text-center">LinkedIn</h5>
-            <Link
+            <a
               href={"https://www.linkedin.com/in/wareesha-jannat"}
               target="_blank"
               className="hover:text-on-surface hover:underline  text-[12px] text-center "
             >
               https://www.linkedin.com/in/wareesha-jannat
-            </Link>
+            </a>
           </li>
           <li>
             <h5 className="text-center">Email</h5>
-            <Link
+            <a
               href="mailto:Wjannat309@gmail.com"
               className="hover:text-on-surface  text-[12px] hover:underline"
             >
               Wjannat309@gmail.com
-            </Link>
+            </a>
           </li>
         </ul>
       </section>
