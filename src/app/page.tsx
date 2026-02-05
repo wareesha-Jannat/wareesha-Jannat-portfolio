@@ -35,8 +35,9 @@ export default function Home() {
             WAREESHA JANNAT
           </h1>
           <h1 className="font-bold text-3xl font-heading text-accent min-[700px]:text-foreground min-[700px]:text-5xl min-[700px]:w-[60%] ">
-            Next.js Web Developer
+            Full Stack Developer
           </h1>
+          <h2 className=" font-bold text-2xl">React.js | Next.js | Node.js</h2>
           <h3 className="max-w-[80%] leading-relaxed">
             Building Clean, responsive web applications developed with modern
             web technologies, emphasizing simplicity, usability, and continuous

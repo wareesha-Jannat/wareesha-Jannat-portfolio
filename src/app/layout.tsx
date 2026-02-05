@@ -22,7 +22,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Wareesha Jannat — Web Developer",
   description:
-    "Portfolio of Wareesha Jannat, a web developer creating modern, responsive and interactive web applications.",
+    "Portfolio of Wareesha Jannat, a Full stack developer creating modern, responsive and interactive web applications.",
   keywords: [
     "Web Developer",
     "Portfolio",
