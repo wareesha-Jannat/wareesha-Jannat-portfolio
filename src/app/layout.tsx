@@ -20,7 +20,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Wareesha Jannat — Web Developer",
+  title: "Wareesha Jannat — Full Stack Web Developer",
   description:
     "Portfolio of Wareesha Jannat, a Full stack developer creating modern, responsive and interactive web applications.",
   keywords: [
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: "Wareesha Jannat — Web Developer",
+    title: "Wareesha Jannat — Full Stack Web Developer",
     description:
       "I build responsive and interactive web applications using modern technologies.",
     type: "website",

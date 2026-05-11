@@ -11,8 +11,8 @@ const AnimateProject3 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="flex flex-1 flex-col md:flex-row items-center justify-center gap-10 md:gap-15 ">
-      <AnimateLeft projects={true} className="order-2 md:order-1">
+    <section className="flex flex-1 flex-col min-[950px]:flex-row items-center justify-center gap-10 min-[950px]:gap-15 ">
+      <AnimateLeft projects={true} className="order-2 min-[950px]:order-1">
         <motion.div
           className="flex flex-col gap-3 flex-1 "
           variants={staggerContainer}
@@ -71,9 +71,13 @@ const AnimateProject3 = () => {
           </motion.div>
         </motion.div>
       </AnimateLeft>
-      <AnimateRight delay={0.2} projects={true} className="order-1 md:order-2">
+      <AnimateRight
+        delay={0.2}
+        projects={true}
+        className="order-1 min-[950px]:order-2"
+      >
         <motion.div
-          className="relative  aspect-1312/650 w-full max-w-[650px]  h-full min-w-[300px] md:min-w-[400px]  border-4 border-surface rounded-[5px]"
+          className="relative  aspect-1312/650 w-full max-w-[650px]  h-full min-w-[300px] min-[950px]:min-w-[400px]  border-4 border-surface rounded-[5px]"
           variants={imageReveal}
           initial="hidden"
           whileInView="visible"

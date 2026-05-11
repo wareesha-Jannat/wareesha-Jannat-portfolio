@@ -11,10 +11,10 @@ import LightBoxImage from "../components/LightBoxImage";
 const AnimateProject2 = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <section className="flex flex-1 flex-col md:flex-row items-center justify-center gap-10 md:gap-15  ">
+    <section className="flex flex-1 flex-col min-[950px]:flex-row items-center justify-center gap-10 min-[950px]:gap-15  ">
       <AnimateLeft projects={true}>
         <motion.div
-          className="relative   aspect-1314/641 w-full max-w-[650px] min-w-[300px] md:min-w-[400px]   border-4 border-surface rounded-[5px] "
+          className="relative   aspect-1314/641 w-full max-w-[650px] min-w-[300px] min-[950px]:min-w-[400px]   border-4 border-surface rounded-[5px] "
           variants={imageReveal}
           initial="hidden"
           whileInView="visible"

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div className="flex-1 flex flex-col items-center justify-center gap-5 mx-auto py-7 max-w-7xl">
-      <h1 className="text-4xl font-bold mt-3 font-heading">
+      <h1 className="text-4xl font-bold pt-8 font-heading">
         <Link href={"/"}>Let&apos;s Connect</Link>
       </h1>
-      <main className="flex flex-col sm:flex-row items-center justify-center gap-10 sm:gap-20 px-4 py-5">
+      <main className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-20 px-4 py-5">
         <AnimateLeft>
           <section>
             <div className=" relative aspect-square max-w-[600px] min-w-[300px] w-full h-full ">
@@ -31,11 +31,10 @@ const page = () => {
         <AnimateRight delay={0.2}>
           <section>
             <h4 className="p-4">
-              <h4 className="p-4">
-                Open to remote opportunities. Please reach out to connect or
-                discuss potential collaborations.
-              </h4>
+              Open to remote opportunities. Please reach out to connect or
+              discuss potential collaborations.
             </h4>
+
             <form
               className="flex flex-col gap-5 px-4"
               action="https://formspree.io/f/xovgrkbv"

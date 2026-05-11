@@ -9,7 +9,7 @@ const Header = () => {
           <Link href={"/"}>WAREESHA JANNAT</Link>
         </h1>
         <nav>
-          <ul className="flex justify-center  items-center gap-7 ">
+          <ul className="flex justify-center  items-center gap-4 sm:gap-7 text-sm sm:text-base">
             <li>
               <Link
                 href={"/aboutMe"}
@@ -20,10 +20,10 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href={"/projects"}
+                href={"/experience"}
                 className="hover:text-on-surface text-links"
               >
-                PROJECTS
+                EXPERIENCE
               </Link>
             </li>
             <li>

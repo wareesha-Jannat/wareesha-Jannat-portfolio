@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <div className="flex-1 flex flex-col items-center justify-center gap-12 max-w-7xl mx-auto py-7 ">
-      <h1 className="text-4xl font-bold font-heading">
+      <h1 className="text-4xl pt-8 font-bold font-heading">
         {" "}
         <Link href={"/"}>About Me</Link>
       </h1>
