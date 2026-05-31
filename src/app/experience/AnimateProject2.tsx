@@ -60,20 +60,7 @@ const AnimateProject2 = () => {
             <b>Tech Stack </b> : Next.js + Next Auth + Mongoose (Mongodb
             database)
           </motion.h4>
-          <motion.h5 className="font-bold" variants={fadeUpStrong}>
-            Test Account
-          </motion.h5>
-
-          <motion.ul className="list-disc" variants={fadeUpStrong}>
-            <li>
-              <b>For Creator</b>{" "}
-              <ul>
-                <li>Username: johndoe@example.com </li>
-                <li>Password: test@12345</li>
-              </ul>
-            </li>
-          </motion.ul>
-
+         
           <motion.div
             className="flex items-center justify-start gap-5"
             variants={fadeUpStrong}

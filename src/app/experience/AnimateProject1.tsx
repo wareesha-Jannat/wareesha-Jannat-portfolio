@@ -42,28 +42,7 @@ const AnimateProject1 = () => {
             <b>Tech Stack </b> : Next.js + Express.js + Mongoose (Mongodb
             database) + Custom JWT Authentication
           </motion.h4>
-          <motion.h5 className="font-bold" variants={fadeUpStrong}>
-            Test Account
-          </motion.h5>
-          <motion.div variants={fadeUpStrong}>
-            <ul className="list-disc">
-              <li>
-                <b>For Student</b>{" "}
-                <ul>
-                  <li>Email: student@example.com</li>
-                  <li>Password: student@123</li>
-                </ul>
-              </li>
-              <li>
-                <b>For Admin</b>{" "}
-                <ul>
-                  <li> Email: admin@example.com</li>
-                  <li>Password: admin@123</li>
-                </ul>
-              </li>
-            </ul>
-          </motion.div>
-
+        
           <motion.div
             className="flex items-center justify-start gap-5 flex-1"
             variants={fadeUpStrong}

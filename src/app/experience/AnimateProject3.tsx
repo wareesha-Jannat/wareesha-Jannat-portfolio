@@ -42,15 +42,6 @@ const AnimateProject3 = () => {
             <b>Tech Stack </b> : Next.js + Prisma (PostgreSQL) + OAuth &
             Session-Based Authentication
           </motion.h4>
-          <motion.h5 className="font-bold" variants={fadeUpStrong}>
-            Test Account
-          </motion.h5>
-
-          <motion.ul variants={fadeUpStrong}>
-            <li>Username: charlie-pat</li>
-            <li>Password: elabglow</li>
-          </motion.ul>
-
           <motion.div
             className="flex items-center justify-start gap-5"
             variants={fadeUpStrong}
