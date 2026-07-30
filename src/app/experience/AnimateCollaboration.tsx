@@ -8,7 +8,7 @@ import { fadeUpStrong, staggerContainer, imageReveal } from "../lib/animation";
 
 import AnimateLeft from "../components/AnimateLeft";
 import AnimateRight from "../components/AnimateRight";
-import LightBoxImage from "../components/LightBoxImage";
+import VideoModal from "../components/VideoModal";
 
 const CollaborativeProject = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const CollaborativeProject = () => {
       {/* LEFT IMAGE SECTION */}
       <AnimateLeft projects={true}>
         <motion.div
-          className="relative aspect-1350/620 w-full max-w-[650px] min-w-[300px] md:min-w-[400px] border-4 border-surface rounded-[5px] cursor-pointer"
+          className="group relative aspect-1350/620 w-full max-w-[650px] min-w-[300px] md:min-w-[400px] border-4 border-surface rounded-[5px] overflow-hidden cursor-pointer"
           variants={imageReveal}
           initial="hidden"
           whileInView="visible"
@@ -26,14 +26,30 @@ const CollaborativeProject = () => {
           onClick={() => setIsOpen(true)}
         >
           <Image
-            src={"/nible-tech-project.PNG"}
-            alt="Collaborative Business Project"
+            src="/images/nible-tech-project.PNG"
+            alt="Nible Tech Preview"
             fill
-            priority
             quality={90}
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw , 50vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 786px) 100vw, 50vw"
           />
+
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition duration-300" />
+
+          {/* Play Button */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-18 h-18 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                className="w-8 h-8 ml-1"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
         </motion.div>
       </AnimateLeft>
 
@@ -112,12 +128,13 @@ const CollaborativeProject = () => {
         </motion.div>
       </AnimateRight>
 
-      {/* LIGHTBOX */}
+      {/* Video Modal */}
       {isOpen && (
-        <LightBoxImage
+        <VideoModal
           open={isOpen}
           setIsOpen={setIsOpen}
-          src={"/nible-tech-project.PNG"}
+          src={"/videos/nible-tech-video.mp4"}
+          poster={"/images/nible-tech-project.PNG"}
         />
       )}
     </section>

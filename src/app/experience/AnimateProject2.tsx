@@ -6,7 +6,7 @@ import Image from "next/image";
 import { fadeUpStrong, imageReveal, staggerContainer } from "../lib/animation";
 import AnimateLeft from "../components/AnimateLeft";
 import AnimateRight from "../components/AnimateRight";
-import LightBoxImage from "../components/LightBoxImage";
+import VideoModal from "../components/VideoModal";
 
 const AnimateProject2 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const AnimateProject2 = () => {
     <section className="flex flex-1 flex-col min-[950px]:flex-row items-center justify-center gap-10 min-[950px]:gap-15  ">
       <AnimateLeft projects={true}>
         <motion.div
-          className="relative   aspect-1314/641 w-full max-w-[650px] min-w-[300px] min-[950px]:min-w-[400px]   border-4 border-surface rounded-[5px] "
+          className="relative group  aspect-1314/641 w-full max-w-[650px] min-w-[300px] min-[950px]:min-w-[400px]   border-4 border-surface rounded-[5px] cursor-pointer overflow-hidden"
           variants={imageReveal}
           initial="hidden"
           whileInView="visible"
@@ -22,13 +22,30 @@ const AnimateProject2 = () => {
           onClick={() => setIsOpen(true)}
         >
           <Image
-            src={"/boostme.PNG"}
-            alt="BoostMe home page"
+            src="/images/boostme.PNG"
+            alt="BoostME preview"
             fill
             quality={90}
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw , 50vw"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 786px) 100vw, 50vw"
           />
+
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition duration-300" />
+
+          {/* Play Button */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-18 h-18 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                className="w-8 h-8 ml-1"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
         </motion.div>
       </AnimateLeft>
       <AnimateRight projects={true}>
@@ -60,7 +77,7 @@ const AnimateProject2 = () => {
             <b>Tech Stack </b> : Next.js + Next Auth + Mongoose (Mongodb
             database)
           </motion.h4>
-         
+
           <motion.div
             className="flex items-center justify-start gap-5"
             variants={fadeUpStrong}
@@ -82,10 +99,10 @@ const AnimateProject2 = () => {
         </motion.div>
       </AnimateRight>
       {isOpen && (
-        <LightBoxImage
+        <VideoModal
           open={isOpen}
           setIsOpen={setIsOpen}
-          src={"/boostme.PNG"}
+          src={"/videos/boostme-video.mp4"}
         />
       )}
     </section>
