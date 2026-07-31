@@ -6,7 +6,7 @@ import Image from "next/image";
 import { fadeUpStrong, imageReveal, staggerContainer } from "../lib/animation";
 import AnimateLeft from "../components/AnimateLeft";
 import AnimateRight from "../components/AnimateRight";
-import LightBoxImage from "../components/LightBoxImage";
+import VideoModal from "../components/VideoModal";
 const AnimateProject3 = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -68,7 +68,7 @@ const AnimateProject3 = () => {
         className="order-1 min-[950px]:order-2"
       >
         <motion.div
-          className="relative  aspect-1312/650 w-full max-w-[650px]  h-full min-w-[300px] min-[950px]:min-w-[400px]  border-4 border-surface rounded-[5px]"
+          className="relative group aspect-1312/650 w-full max-w-[650px]  h-full min-w-[300px] min-[950px]:min-w-[400px]  border-4 border-surface rounded-[5px] cursor-pointer overflow-hidden"
           variants={imageReveal}
           initial="hidden"
           whileInView="visible"
@@ -76,17 +76,38 @@ const AnimateProject3 = () => {
           onClick={() => setIsOpen(true)}
         >
           <Image
-            src={"/echo.webp"}
-            alt="Echo home page"
+            src="/images/echo.webp"
+            alt="Echo Preview"
             fill
-            className="object-cover"
-            sizes="(max-width: 768px) 100vw , 50vw"
-            quality={80}
+            quality={90}
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
+            sizes="(max-width: 786px) 100vw, 50vw"
           />
+
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/45 transition duration-300" />
+
+          {/* Play Button */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-18 h-18 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                className="w-8 h-8 ml-1"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
         </motion.div>
       </AnimateRight>
       {isOpen && (
-        <LightBoxImage open={isOpen} setIsOpen={setIsOpen} src="/echo.webp" />
+        <VideoModal
+          open={isOpen}
+          setIsOpen={setIsOpen}
+          src="/videos/echo-video.mp4"
+        />
       )}
     </section>
   );

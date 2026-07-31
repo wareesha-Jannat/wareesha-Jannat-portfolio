@@ -6,13 +6,35 @@ import Image from "next/image";
 import { fadeUpStrong, imageReveal, staggerContainer } from "../lib/animation";
 import AnimateLeft from "../components/AnimateLeft";
 import AnimateRight from "../components/AnimateRight";
-import LightBoxImage from "../components/LightBoxImage";
+import VideoModal from "../components/VideoModal";
+
+
+const demos = {
+  student: {
+    image: "/images/VQB-Student.PNG",
+    video: "/videos/VQB-student-video.mp4",
+    title: "Student Panel",
+  },
+  admin: {
+    image: "/images/VQB-Admin.PNG",
+    video: "/videos/VQB-admin-video.mp4",
+    title: "Admin Panel",
+  },
+};
 
 const AnimateProject1 = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [selectedDemo, setSelectedDemo] = useState<"student" | "admin">(
+    "student",
+  );
+
+  const currentDemo = demos[selectedDemo];
   return (
     <section className="flex flex-1 flex-col min-[950px]:flex-row items-center justify-center gap-10 min-[950px]:gap-15 ">
-      <AnimateLeft projects={true} className="order-2 min-[950px]:order-1 flex-1">
+      <AnimateLeft
+        projects={true}
+        className="order-2 min-[950px]:order-1 flex-1"
+      >
         <motion.div
           className="flex flex-col gap-3 "
           variants={staggerContainer}
@@ -42,7 +64,7 @@ const AnimateProject1 = () => {
             <b>Tech Stack </b> : Next.js + Express.js + Mongoose (Mongodb
             database) + Custom JWT Authentication
           </motion.h4>
-        
+
           <motion.div
             className="flex items-center justify-start gap-5 flex-1"
             variants={fadeUpStrong}
@@ -68,28 +90,79 @@ const AnimateProject1 = () => {
           </motion.div>
         </motion.div>
       </AnimateLeft>
-      <AnimateRight delay={0.2} projects={true} className="order-1 min-[950px]:order-2 ">
+      <AnimateRight
+        delay={0.2}
+        projects={true}
+        className="order-1 min-[950px]:order-2 "
+      >
+        <div className="mb-4 flex gap-3">
+          <button
+            onClick={() => setSelectedDemo("student")}
+            className={`px-4 py-2 rounded-full transition font-medium ${
+              selectedDemo === "student"
+                ? "bg-foreground text-white"
+                : "bg-surface text-on-surface"
+            }`}
+          >
+            🎓 Student
+          </button>
+
+          <button
+            onClick={() => setSelectedDemo("admin")}
+            className={`px-4 py-2 rounded-full transition font-medium ${
+              selectedDemo === "admin"
+                ? "bg-foreground text-white"
+                : "bg-surface text-on-surface"
+            }`}
+          >
+            ⚙️ Admin
+          </button>
+        </div>
         <motion.div
-          className="relative  aspect-1350/620 w-full max-w-[650px] min-w-[300px] min-[950px]:min-w-[400px] border-4 border-surface rounded-[5px] "
+          className="relative group aspect-1350/620 w-full max-w-[650px] min-w-[300px] min-[950px]:min-w-[400px] border-4 border-surface rounded-[5px] overflow-hidden cursor-pointer"
           variants={imageReveal}
+          key={selectedDemo}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           onClick={() => setIsOpen(true)}
         >
           <Image
-            src={"/VQB.PNG"}
-            alt="VQB home page"
+            src={currentDemo.image}
+            alt={currentDemo.title}
             fill
             priority
             quality={90}
-            className="object-cover"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
             sizes="(max-width: 768px) 100vw , 50vw"
           />
+
+          {/*dark overlay */}
+          <div className="absolute inset-0 bg-black/30 transition-transform group-hover:bg-black/45 duration-300" />
+
+          {/* Play Button */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-18 h-18 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition duration-300">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="black"
+                className="w-8 h-8 ml-1"
+              >
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </div>
+          </div>
         </motion.div>
       </AnimateRight>
+
       {isOpen && (
-        <LightBoxImage open={isOpen} setIsOpen={setIsOpen} src={"/VQB.PNG"} />
+        <VideoModal
+          open={isOpen}
+          setIsOpen={setIsOpen}
+          src={currentDemo.video}
+          poster={currentDemo.image}
+        />
       )}
     </section>
   );
