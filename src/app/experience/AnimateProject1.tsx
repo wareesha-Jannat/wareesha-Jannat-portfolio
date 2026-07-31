@@ -12,12 +12,12 @@ import VideoModal from "../components/VideoModal";
 const demos = {
   student: {
     image: "/images/VQB-Student.PNG",
-    video: "/videos/VQB-student-video.mp4",
+    video: "/videos/VQB-Student-video.mp4",
     title: "Student Panel",
   },
   admin: {
     image: "/images/VQB-Admin.PNG",
-    video: "/videos/VQB-admin-video.mp4",
+    video: "/videos/VQB-Admin-video.mp4",
     title: "Admin Panel",
   },
 };

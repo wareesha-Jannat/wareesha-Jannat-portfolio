@@ -31,6 +31,3 @@ Powered by **Formspree**. Replace the form action with your Formspree endpoint.
 
 Showcase my projects and skills as a web developer.
 
----
-
-Built with ❤️ using Next.js
