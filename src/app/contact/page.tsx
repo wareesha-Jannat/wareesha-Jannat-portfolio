@@ -19,7 +19,7 @@ const page = () => {
           <section>
             <div className=" relative aspect-square max-w-[600px] min-w-[300px] w-full h-full ">
               <Image
-                src={"/Contact.gif"}
+                src={"/images/Contact.gif"}
                 alt="Contact gif"
                 fill
                 priority
