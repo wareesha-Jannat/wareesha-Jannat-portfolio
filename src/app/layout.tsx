@@ -1,21 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Inter, Fira_Code } from "next/font/google";
 import "./globals.css";
-import { Poppins, Inter } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-const poppins = Poppins({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-poppins",
+  variable: "--font-serif",
   display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const firaCode = Fira_Code({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -55,13 +61,14 @@ export const metadata: Metadata = {
     ],
   },
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <meta
           name="google-site-verification"
@@ -90,11 +97,13 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${poppins.variable} ${inter.variable} antialiased font-sans`}
+        className={`${cormorant.variable} ${inter.variable} ${firaCode.variable} antialiased bg-background text-foreground selection:bg-[#dfd5c6] selection:text-accent-foreground`}
       >
-        <div className="min-h-dvh flex flex-col">
+        <div className="min-h-screen flex flex-col bg-background">
           <Header />
+
           {children}
+
           <Footer />
         </div>
       </body>

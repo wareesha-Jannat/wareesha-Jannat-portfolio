@@ -29,5 +29,9 @@ Powered by **Formspree**. Replace the form action with your Formspree endpoint.
 
 ## Purpose
 
-Showcase my projects and skills as a web developer.
+Showcase my projects and skills as a Full Stack Web Developer.
 
+## Credits
+
+**background**
+https://unsplash.com/photos/a-black-and-white-photo-of-a-mountain-range-RVM5HYqg2jA?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink
